@@ -1,0 +1,25 @@
+.screen{
+    background-color: #83d3b8;
+    height: 75px;
+}
+
+.buttons{
+    border: none;
+    width: 80px;
+    height: 45px;
+    margin: 10px;
+}
+
+.operators{
+    display: flex;
+    flex-direction: column;
+}
+
+.buttonPlace{
+    display: flex;
+}
+
+.calculator{
+    border: 4px solid black;
+    width: 400px;
+}
