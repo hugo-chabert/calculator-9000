@@ -1,16 +1,16 @@
 import React from 'react'
+import axios from 'axios'
 
-export default function MagnificientEqualButton({value, setValue}) {
+export default function MagnificientEqualButton({value, calcul, setValue, setResult, setCalcul}) {
 
     function result(){
         try
         {
             const result = eval(value)
-            if(result > 9000){
-                setValue("ItSOverNineThousand")
-            }else{
-                setValue(result)
-            }
+            const calcul = value
+            setCalcul(calcul)
+            setResult(result)
+            setValue(result)
         }
         catch
         {
@@ -18,9 +18,23 @@ export default function MagnificientEqualButton({value, setValue}) {
         }
     }
 
+    const save = async () => {
+        try {
+            const response = axios.post('http://localhost/runtrackreactjs/calculator-9000/src/data.php', {
+                result: value,
+                calcul: calcul
+            });
+            console.log(response.data);
+        }
+        catch (error){
+            console.log(error)
+        }
+    }
+
     return (
         <div>
-            <button class="buttons" onClick={result}>=</button>
+            <button class="buttonSave" onClick={save}>SAVE</button>
+            <button class="buttonEqual" onClick={result}>=</button>
         </div>
     )
 }
