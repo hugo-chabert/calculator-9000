@@ -24,7 +24,10 @@ export default function AmazingNumberButton({value, setValue}) {
                 <button class="buttons" onClick={() => changeValue("8")}>8</button>
                 <button class="buttons" onClick={() => changeValue("9")}>9</button>
             </div>
-            <button class="buttonsBig" onClick={() => changeValue("0")}>0</button>
+            <div>
+                <button class="buttonsBig" onClick={() => changeValue("0")}>0</button>
+                <button class="buttons" onClick={() => changeValue(".")}>.</button>
+            </div>
         </div>
     )
 }

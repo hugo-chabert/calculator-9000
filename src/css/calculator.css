@@ -40,7 +40,7 @@
 
 .buttonsBig{
     border: none;
-    width: 280px;
+    width: 180px;
     height: 45px;
     margin: 10px;
     background-color: #9897C2;
@@ -105,4 +105,19 @@
 .topText{
     color: white;
     height: 20px;
+}
+
+.containerCalculator{
+    display: flex;
+}
+
+.table{
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-left: 200px;
+}
+td, th {
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
 }

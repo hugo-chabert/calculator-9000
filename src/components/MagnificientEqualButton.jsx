@@ -20,7 +20,7 @@ export default function MagnificientEqualButton({value, calcul, setValue, setRes
 
     const save = async () => {
         try {
-            const response = axios.post('http://localhost/runtrackreactjs/calculator-9000/src/data.php', {
+            const response = axios.post('http://localhost/runtrackreactjs/calculator-9000/src/post.php', {
                 result: value,
                 calcul: calcul
             });

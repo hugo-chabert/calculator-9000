@@ -9,7 +9,6 @@ $data = json_decode($request_body, true);
 $calcul = (STRING) $data['calcul'];
 $result = $data['result'];
 
-var_dump($calcul);
 
 define("DBHOST", "localhost");
 define("DBUSER", "root");
